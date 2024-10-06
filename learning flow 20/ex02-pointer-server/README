@@ -1,0 +1,14 @@
+step 1: in the prints , %p expects a pointer, %d a digit , %s a string 
+so there is a warning when the argument that is passed is not of the good type. 
+
+step 2: we print the idserver's region, status, id as strings and its latency and the value pointed by nthreads as integers.
+
+step 3: Calling the function modify: pass-by-value makes a copy of the parameters and then modifies the copy in the stack, 
+and when we get outside the function the stack is emptied and the initial parameters have not been changed.
+
+Calling modify-by-pointer : pass-by-reference chenages the parameters through a pointer so the changes remain after the function call.
+
+step 4: Albi is a copy of the idserver cmok , we create a new pointer s2 that points to albi, then modify the latter by pointer.
+This way, the "parent" idserver cmok has not been modified .
+
+step 5 : We have to put the pointer on the heap using malloc() so that it is still available after the function call. We do not forget to free() the pointer afterwards. 

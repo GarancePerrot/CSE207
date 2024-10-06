@@ -1,0 +1,13 @@
+Implementation of a wgetX application for TCP connections.
+
+
+How to test the code:
+
+make clean
+make
+./wgetX http://example.com/
+
+
+
+
+I did not manage to handle redirects and image downloads.

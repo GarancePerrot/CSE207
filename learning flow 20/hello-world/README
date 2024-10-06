@@ -1,0 +1,12 @@
+For all the programs, the header file contains the declaration of the functions (other than main which is not declared),
+and the soucre file contains their implementation and the main function that is called automatically. 
+
+The program hello-world prints the string "hello world" when it is run. 
+
+The program international-hello-world prints the string "Bonjour le monde!" or its translation in English, 
+Spanish, Chinese or Danish depending on the LANGUAGE variable that is defined at the top of the makefile. 
+
+The program fancy-hello-world prints the string "Hello World, hello NAME" where NAME is a variable that the user 
+has to type on the keyboard after calling the function. See copy of the code for more details.
+
+Garance Perrot BX24

@@ -1,0 +1,19 @@
+I got inspiration from this YT video :
+"Thread synchronization with mutexes in C" , https://www.youtube.com/watch?v=nlHIuG3RQ0g
+And also I got some help from ChatGPT which helped me identify some small mistakes (free() not at the right place, 
+add a mutex for buffer_client in the server code...)
+
+
+To test the code open three (or more) terminals:
+
+T1: gcc -c mthread_server.c
+    cc -pthread -o mthread_server mthread_server.o
+    ./mthread_server 1212 (or random port number)
+
+T2: gcc -c mthread_client.c
+    cc -pthread -o mthread_client mthread_client.o
+    ./mthread_client "127.0.0.1" 1212 (same port number as server)
+    //Type a text to send to the server, press enter
+    //Type another text, observe that the server sends back the new text
+
+T3: same a T2

@@ -1,0 +1,28 @@
+Garance Perrot BX24
+
+These programs allow to create a UDP connection between a client and a server. 
+
+The client reads a string from the keyboard, sends it to the server. 
+Same for the fancy client but then it reads the string from the server and prints it on the screen.
+The server receives data from the client and sends back the exact same message.
+
+I took inspiration from the following youtube videos:
+
+"UDP client program" https://www.youtube.com/watch?v=tphRJEvKysM&t=301s
+"UDP server program" https://www.youtube.com/watch?v=BD0D0JmXVlg&t=266s
+"The Most Simple UDP Client Server Program In C!" https://www.youtube.com/watch?v=lUyaV4haBUE
+
+To test the code:
+On two different terminals T1 and T2: (4455 is an example of port number)
+
+T1: gcc server.c -o server
+    ./server 4455
+
+T2: gcc fancyclient.c -o fclient
+    ./fclient "127.0.0.1" 4455
+    Type a message and press enter
+
+The message should be sent to the server, received by it, and sent back to the client and received by it.  
+    
+
+
